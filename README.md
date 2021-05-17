@@ -62,11 +62,10 @@ Flashing: Using the Arduino Nano Sense 33 BLE
   ![TensorFlow Lite Library](/readme_images/tflib.png)
 
 4. Open the sketch and flash
-
-- Download the BLE Interface [file](https://tinyml-experiment-ble-imu-interface-dot-gweb-tf-micro-exp.uc.r.appspot.com/tinyml-experiment-imu-ble-interface.zip "file")
-- Unzip the downloaded BLE Interface file, open the **arduino** <folder> and double click on <tinyml-experiment-imu-ble-interface.ino> file
+- Download or clone the [tf4micro motion kit repo](https://github.com/googlecreativelab/tf4micro-motion-kit)
+- Open the **arduino/tf4micro-motion-kit** <folder> and double click on <tf4micro-motion-kit.ino> file
 - Click the Right arrow in the top left corner to build and upload the sketch.  
-  ![Arduino Port](/readme_images/buttons.png)
+![Arduino Port](/readme_images/buttons.png)
 
 - **Warning**: This process may take a few minutes. Also, warnings may populate but the upload should still succeed in spite of them.
 - If the sketch is installed, the LED on the board should flash red and green.
