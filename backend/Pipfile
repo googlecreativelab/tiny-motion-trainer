@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+tensorflow = "*"
+gunicorn = "*"
+flask-cors = "*"
+tensorflowjs = "*"
+shortuuid = "*"
+werkzeug = "*"
+numpy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "2.7"

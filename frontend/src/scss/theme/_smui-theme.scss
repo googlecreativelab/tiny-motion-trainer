@@ -1,0 +1,90 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+// Svelte Colors!
+@use '@material/theme/index' as theme with (
+  $primary: #FF6F00,
+  $secondary: #676778,
+  $surface: #fff,
+  $background: #fff,
+  $error: color-palette.$red-900,
+);
+
+@use '@material/linear-progress/index' as linear-progress;
+
+.mdc-linear-progress-black {
+  @include linear-progress.bar-color(#000);
+  @include linear-progress.buffer-color(#999);
+}
+
+@import "../vars";
+
+html {
+  .mdc-slider {
+    margin: 0;
+    .mdc-slider__track,
+    .mdc-slider__track--inactive,
+    .mdc-slider__track--active {
+      height: 2px;
+    }
+
+    .mdc-slider__track--inactive {
+      background-color: $color-bg-quaternary;
+      opacity: 1;
+    }
+
+    .mdc-slider__thumb-knob {
+      width: 12px;
+      height: 12px;
+      border-width: 6px;
+    }
+
+    .mdc-slider__thumb {
+      width: 32px;
+      height: 32px;
+      left: -16px;
+      top: 7.5px;
+    }
+  }
+
+  .mdc-text-field__input {
+    font-family: inherit;
+  }
+  .smui-text-field--standard {
+    height: 24px;
+    width: 54px;
+
+    input.mdc-text-field__input {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+      }
+    }
+  }
+
+  .mdc-text-field--outlined {
+    height: 52px;
+  }
+
+  .mdc-text-field.mdc-text-field--outlined,
+  .mdc-notched-outline.mdc-notched-outline--upgraded {
+    border-radius: 0;
+    border-width: $border-width;
+    border-color: $color-fg-primary;
+
+    .mdc-notched-outline__leading,
+    .mdc-notched-outline__notch,
+    .mdc-notched-outline__trailing {
+      border-radius: 0;
+      border-width: $border-width;
+      border-color: $color-fg-primary;
+    }
+  }
+
+  .mdc-linear-progress {
+    height: 3px;
+  }
+}

@@ -1,0 +1,160 @@
+/* ======================================================================
+Copyright 2021 Google LLC
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. 
+========================================================================*/
+
+/**
+* @autor Rikard Lindstrom <rlindstrom@google.com>
+*/
+
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "text";
+@import "layout";
+
+p {
+  margin: 5px 0;
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+
+  .icon {
+    margin-right: 8px;
+  }
+}
+
+.button {
+  position: relative;
+  padding: 0 1.2rem;
+  height: 52px;
+  background: none;
+  border-radius: 0;
+  // border: 2px solid $color-fg-primary;
+  letter-spacing: 0.1px;
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+
+  @extend .subhead-1;
+
+  transition: transform 0.25s;
+
+  &:disabled {
+    color: $color-fg-primary;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .icon {
+    margin-left: -6px;
+    margin-right: 2px;
+  }
+
+  &.small {
+    height: 34px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: $border-width solid $color-fg-primary;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: $border-width;
+    left: 1px;
+    bottom: -$border-width * 2;
+    right: -$border-width * 2;
+    z-index: -1;
+    background: $color-bg-tertiary;
+    transition: background-color 0.25s, top 0.25s, left 0.25s, right 0.25s, bottom 0.25s;
+  }
+
+  &.icon-button {
+    padding: 0 1.7rem;
+  }
+
+  &.primary {
+    &:before {
+      background: $color-bg-quaternary;
+    }
+    &:disabled {
+      &:before {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &:hover {
+    transform: translate($border-width, $border-width);
+
+    &:before {
+      background: $color-bg-highlight;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.icon-button {
+  padding: 0;
+  img {
+    margin: 0;
+  }
+}
+
+.no-transition {
+  * {
+    transition: none;
+    animation: none;
+  }
+}
+
+.warning {
+  color: $color-bg-highlight;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 9px;
+
+  &.red {
+    background-color: #ea4335;
+  }
+
+  &.green {
+    background-color: #34a853;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}

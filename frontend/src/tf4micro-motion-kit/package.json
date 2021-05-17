@@ -1,0 +1,13 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts":{
+    "build_old": "rollup index.js --file dist/tinyml-experiment-ble-imu-interface.js --format iife && cp -r static/ dist/static/",
+    "build": "rollup index.js --file dist/tf4micro-motion-kit.js --format iife && cp -r static/ dist/static/"
+  },
+  "devDependencies": {
+    "rollup": "^2.45.2"
+  }
+}
