@@ -15,7 +15,7 @@ These projects were built with the
 
 ## Experiment Description
 
-[Tiny Motion Trainer](https://experiments.withgoogle.com/tiny-motion-trainer "Tiny Motion Trainer") lets you train and test machine learning models for your Arduino Nano 33 BLE Sense in the browser. The webpage then provides a TensorFlow for Microcontrollers model and some sample code to get you started on using the model.
+[Tiny Motion Trainer](https://experiments.withgoogle.com/tiny-motion-trainer "Tiny Motion Trainer") lets you train and test machine learning models for your Arduino Nano 33 BLE Sense in the browser. The webpage then provides a TensorFlow Lite for Microcontrollers model and some sample code to get you started on using the model.
 
 Other experiments to explore:
 
