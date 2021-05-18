@@ -6,10 +6,10 @@
 
 Since 2009, coders have created thousands of experiments using Chrome, Android, AI, WebVR, AR and more. We showcase these projects and a variety of helpful tools and resources to inspire a diverse community of makers to explore, create, and share what’s possible with these technologies.
 
-**Tiny Motion Trainer** is a part of the Tensorflow Microcontroller Experiments, a collection of open source, interactive projects designed to demonstrate some fun ways to combine Arduino and Tensorflow Lite for Microcontrollers.
+**Tiny Motion Trainer** is a part of the TensorFlow Lite for Microcontrollers Experiments, a collection of open source, interactive projects designed to demonstrate some fun ways to combine Arduino and TensorFlow Lite for Microcontrollers.
 
 These projects were built with the
-[Arduino Sense 33 BLE](https://store.arduino.cc/usa/nano-33-ble-sense "Arduino Store"), [Tensorflow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers "TFL4M"), standard web technologies ( HTML, CSS & Javascript).
+[Arduino Sense 33 BLE](https://store.arduino.cc/usa/nano-33-ble-sense "Arduino Store"), [TensorFlow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers "TFL4M"), standard web technologies ( HTML, CSS & Javascript).
 
 ---
 
@@ -27,7 +27,7 @@ Other experiments to explore:
 ## Tools
 
 - Linux, MacOS or Windows computer with [Chrome](https://www.google.com/chrome/?brand=WHAR&geo=US&gclid=Cj0KCQjw9_mDBhCGARIsAN3PaFNRBCVUxmhR1QPA2LHaoELEr9yc1KkSNQ-Jc9KVZd8Sq2ux5gR6mJsaAm_6EALw_wcB&gclsrc=aw.ds "Chrome") installed
-- Tensorflow Microcontroller Kit by SparkFun or [Arduino Nano BLE Sense 33](https://store.arduino.cc/usa/nano-33-ble-sense "Arduino Nano")
+- TensorFlow Lite for Microcontrollers Kit by SparkFun or [Arduino Nano BLE Sense 33](https://store.arduino.cc/usa/nano-33-ble-sense "Arduino Nano")
 - [Micro USB](https://www.google.com/search?rlz=1C5CHFA_enUS858US858&sxsrf=ALeKk01CbJTvQbYgX6arJbsjcRVmv-3-RQ:1584929968297&q=Micro+USB+cable&spell=1&sa=X&ved=2ahUKEwjl8IOexK_oAhXDqZ4KHZ0mCmcQBSgAegQIDhAn&biw=1680&bih=832 "Micro USB") cable (If you're on a USB-C laptop, instead get a [USB-C to Micro USB](https://www.google.com/search?&q=USB-C+to+Micro+USB+cable "USB-C to Micro USB") cable)
 - Rubberband
 - [Optional] Battery
@@ -76,9 +76,9 @@ Flashing: Using the Arduino Nano Sense 33 BLE
 
 ---
 
-## Using the Tensorflow Microcontroller Kit by SparkFun
+## Using the TensorFlow Lite for Microcontrollers Kit by SparkFun
 
-The board that comes with the Tensorflow Microcontroller Kit by SparkFun comes preflashed with a sketch that will work with some of the experiments right out of the box. If you are using one of the “Tensorflow Microcontroller” kits and you just want to jump right into playing with the experiments then you can simply connect your arduino to a power source (USB or Battery) and connect to one of the following experiment URLs:
+The board that comes with the TensorFlow Lite for Microcontrollers Kit by SparkFun comes preflashed with a sketch that will work with some of the experiments right out of the box. If you are using one of the “TensorFlow Lite for Microcontrollers” kits and you just want to jump right into playing with the experiments then you can simply connect your arduino to a power source (USB or Battery) and connect to one of the following experiment URLs:
 
 - [Air Snare](https://experiments.withgoogle.com/air-snare/view "Air Snare")
 - [Finger User Interface (FUI)](https://experiments.withgoogle.com/finger-user-interface/view "FUI")
@@ -89,7 +89,7 @@ The board that comes with the Tensorflow Microcontroller Kit by SparkFun comes p
 ## FAQ & Common Errors
 
 **What exactly is being transferred when I “connect”?**<br/>
-When you’re connecting the board to your computer, a pre-trained Tensorflow Lite machine learning model gets transferred over BLE onto the device. The sketches that are uploaded to the Arduino include a common TensorFlow Lite for Microcontrollers model architecture. The different experiment websites change the behavior of the sketch by changing the model to one specifically made for the experience.
+When you’re connecting the board to your computer, a pre-trained TensorFlow Lite machine learning model gets transferred over BLE onto the device. The sketches that are uploaded to the Arduino include a common TensorFlow Lite for Microcontrollers model architecture. The different experiment websites change the behavior of the sketch by changing the model to one specifically made for the experience.
 
 **What if I’m having issues connecting via bluetooth?**<br/>
 If you are having issues connecting try the following:
@@ -115,7 +115,7 @@ You can create your own model in several different ways. Check out these links:
 - [Experiments Collection](https://experiments.withgoogle.com/collection/tfliteformicrocontrollers "Experiments Collection") - Inspiration and more resources
 - [Tiny Motion Trainer](https://experiments.withgoogle.com/tiny-motion-trainer/view "Tiny Motion Trainer") - Code-free motion trainer for microcontrollers
 - [Teachable Machine](https://teachablemachine.withgoogle.com/ "Teachable Machine") - Code-free image model trainer
-- [Tensorflow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers "Tensorflow Lite for Microcontrollers") - Full documentation
+- [TensorFlow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers "TensorFlow Lite for Microcontrollers") - Full documentation
 - [Free Harvard EdX Course](https://www.edx.org/professional-certificate/harvardx-tiny-machine-learning "Harvard X Course") - In-depth course on TensorFlow Lite for Microcontrollers and the TinyML Ecosystem
 
 **"What sensors do the experiments use?"**<br/>
