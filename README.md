@@ -20,7 +20,7 @@ These projects were built with the
 Other experiments to explore:
 
 - [Air Snare](https://experiments.withgoogle.com/air-snare "Air Snare Google Experiment") lets you play the drums in the air.
-- [Finger User Interface or FUI (pronounced Foo-ey)](https://experiments.withgoogle.com/fui "FUI") - lets you control your devices with the wave of a finger.
+- [Finger User Interface or FUI (pronounced Foo-ey)](https://experiments.withgoogle.com/finger-user-interface "FUI") - lets you control your devices with the wave of a finger.
 
 ---
 
