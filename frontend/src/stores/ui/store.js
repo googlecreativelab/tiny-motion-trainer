@@ -45,7 +45,7 @@ export const promptStack = writable(null);
 export const hasShownConnectPrompt = writable(false);
 
 export const sketchFileUrl = readable(
-  "http://tf4micro-motion-kit-dot-gweb-tf-micro-exp.uc.r.appspot.com/tf4micro-motion-kit-v005.zip"
+  "https://github.com/googlecreativelab/tf4micro-motion-kit/releases/latest"
 );
 
 export const errorStack = writable([]);

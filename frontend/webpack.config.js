@@ -111,7 +111,7 @@ module.exports = (env) => {
       }),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: `TinyML Trainer v${version}`,
+        title: `Tiny Motion Trainer`,
         template: "src/index.html",
       }),
       new MiniCssExtractPlugin({
@@ -121,6 +121,6 @@ module.exports = (env) => {
         patterns: [{ from: "static", to: "static" }],
       }),
     ],
-    devtool: prod ? "source-map" : "source-map",
+    devtool: prod ? "hidden-source-map" : "source-map",
   };
 };

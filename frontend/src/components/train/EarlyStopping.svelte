@@ -19,6 +19,7 @@
     <NumberInput
       classStr="subhead-1"
       name="early_stopping_epochs"
+      label="Number of epochs before stopping"
       bind:value={$trainEarlyStoppingMaxEpochsWithoutImprovement}
       min={1}
     /><label class="subhead-1" for="early_stopping_epochs"> Epochs</label>
@@ -28,6 +29,7 @@
     <NumberInput
       classStr="subhead-1"
       name="early_stopping_min_acc"
+      label="Early stopping (epochs)"
       bind:value={$trainEarlyStoppingMinAccuracy}
       min={1}
       max={100}

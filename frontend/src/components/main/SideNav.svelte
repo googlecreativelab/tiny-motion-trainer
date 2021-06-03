@@ -48,6 +48,7 @@ limitations under the License.
       class="h2 menu-item"
       class:active={location.pathname.includes(BASE_PATH + "/train")}
       class:disabled={!$trainIsUnlocked}
+      aria-disabled={!$trainIsUnlocked}
     >
       <Link to="train">
         <span class="icon"><Icon icon="train_24px.svg" /></span>Train your model
@@ -57,6 +58,7 @@ limitations under the License.
       class="h2 menu-item"
       class:active={location.pathname.includes(BASE_PATH + "/test")}
       class:disabled={!$testIsUnlocked}
+      aria-disabled={!$testIsUnlocked}
     >
       <Link to="test">
         <span class="icon"><Icon icon="test_24px.svg" /></span>Test your model
@@ -99,7 +101,7 @@ limitations under the License.
       border-top: $border-width solid $color-fg-primary;
       border-bottom: $border-width solid $color-fg-primary;
       background-color: $color-bg-highlight;
-      padding: (16px - $border-width) 0 (16px - $border-width) 27px;
+      padding: (14.5px - $border-width) 0 (14.5px - $border-width) 27px;
     }
   }
 </style>

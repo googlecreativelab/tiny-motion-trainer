@@ -79,7 +79,8 @@ limitations under the License.
 <div class="row settings">
   <div class="panel">
     <div>
-      <label class="h2" for="capture-threshold">Capturing threshold</label>
+      <h2 class="h2" for="capture-threshold">Capturing threshold</h2>
+      >
       <p>
         The minimum motion to start recording. Once motion above the threshold
         is detected, recording begins. The results are used by the model to
@@ -87,10 +88,11 @@ limitations under the License.
       </p>
     </div>
     <div>
-      <div class="form-container">
+      <div class="form-container input-align-right">
         <SettingsInput
           name="capturing-threshold"
           value={$captureThreshold}
+          label="Capture threshold"
           onChange={(value) => checkForRecordings(captureThreshold, value)}
           min={minMaxValues.captureThreshold[0]}
           max={minMaxValues.captureThreshold[1]}
@@ -109,7 +111,8 @@ limitations under the License.
 
   <div class="panel">
     <div>
-      <label class="h2" for="number-of-samples">Number of samples</label>
+      <h2 class="h2" for="number-of-samples">Number of samples</h2>
+      >
       <p>
         The recording happens at about 100 samples per second. Choosing a lower
         number of samples will speed up the process of capturing your motion
@@ -117,10 +120,11 @@ limitations under the License.
       </p>
     </div>
     <div>
-      <div class="form-container">
+      <div class="form-container input-align-right">
         <SettingsInput
           name="number-of-samples"
           value={$captureSamples}
+          label="Number of samples to record"
           onChange={(value) => checkForRecordings(captureSamples, value)}
           min={minMaxValues.captureSamples[0]}
           max={minMaxValues.captureSamples[1]}
@@ -132,8 +136,9 @@ limitations under the License.
 
   <div class="panel">
     <div>
-      <label class="h2" for="delay-between-captures"
-        >Delay between captures (seconds)</label
+      <h2 class="h2" for="delay-between-captures">
+        Delay between captures (seconds)
+      </h2>
       >
       <p>
         In seconds, provide how long to wait after one recording was made before
@@ -141,10 +146,11 @@ limitations under the License.
       </p>
     </div>
     <div>
-      <div class="form-container">
+      <div class="form-container input-align-right">
         <SettingsInput
           name="delay-between-captures"
           value={$captureDelay}
+          label="Delay in seconds between captures"
           onChange={(value) => checkForRecordings(captureDelay, value)}
           min={minMaxValues.captureDelay[0]}
           max={minMaxValues.captureDelay[1]}
@@ -174,12 +180,13 @@ limitations under the License.
     display: flex;
     justify-content: space-between;
     > div {
-      margin: 0 24px;
+      margin: 0;
       &:first-child {
-        width: 40%;
+        width: 36%;
+        margin-right: 24px;
       }
       &:last-child {
-        width: 60%;
+        width: 64%;
       }
     }
   }

@@ -24,6 +24,8 @@ import { trainedModel } from "../train/store";
 import persistStore from "../utils/persistStore";
 import { fileHandle, hasFile, fileVersion } from "./store";
 
+const isChromeOs = /(CrOS)/.test(navigator.userAgent);
+
 async function writeJsonFile(fileHandle) {
   // Create a FileSystemWritableFileStream to write to.
   const writable = await fileHandle.createWritable();
@@ -98,12 +100,14 @@ export async function saveFileAs() {
 export async function loadFile() {
   const [$fileHandle] = await window.showOpenFilePicker({
     multiple: false,
-    types: [
-      {
-        description: "JSON File",
-        accept: { "application/json": [".json"] },
-      },
-    ],
+    types: isChromeOs
+      ? undefined
+      : [
+          {
+            description: "JSON File",
+            accept: { "application/json": [".json"] },
+          },
+        ],
   });
   await readFile($fileHandle);
   fileHandle.set($fileHandle);

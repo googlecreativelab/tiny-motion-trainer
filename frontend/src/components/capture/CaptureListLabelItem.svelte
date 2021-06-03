@@ -49,10 +49,20 @@ limitations under the License.
   }
 </script>
 
-<li class:active on:click={onSelect}>
-  <div class="row">
+<li class:active>
+  <button
+    class="select-label-button"
+    on:click={onSelect}
+    aria-label="Select label"
+    aria-pressed={active}
+  />
+
+  <div class="row firs-row">
     <span class="label subhead-1">{label}</span><button
       class="remove-button"
+      aria-label="Delete label"
+      disabled={!active}
+      aria-pressed="undefined"
       on:click={handleRemoveLabel}
       ><span class="icon"><Icon icon="close_24px.svg" /></span></button
     >
@@ -60,7 +70,11 @@ limitations under the License.
   {#if active}
     <div class="row">
       <div class="rec-button-container">
-        <button class="button primary small" on:click={handleToggleRecording}
+        <button
+          class="button primary small rec-button"
+          on:click={handleToggleRecording}
+          disabled={!active}
+          aria-pressed={$captureState !== "idle"}
           ><span
             class="dot"
             class:idle={$captureState === "idle"}
@@ -95,7 +109,8 @@ limitations under the License.
         {/if}
       </div>
       <button
-        class="notation-text"
+        class="notation-text csv-button"
+        disabled={!active}
         on:click={() => loadCsvFileToLabel(labelIndex)}>Upload CSV</button
       >
     </div>
@@ -133,16 +148,28 @@ limitations under the License.
     display: flex;
     flex-direction: column;
     padding: 18px 24px;
+    position: relative;
 
-    button {
+    .select-label-button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .remove-button,
+    .csv-button,
+    .rec-button {
       margin-right: 5px;
-      &.remove-button {
-        margin: 0;
+    }
+
+    .remove-button {
+      padding: 0;
+      margin: 0;
+      :global(.icon) {
         padding: 0;
-        :global(.icon) {
-          padding: 0;
-          margin: 0;
-        }
+        margin: 0;
       }
     }
 
@@ -170,13 +197,15 @@ limitations under the License.
       margin: 0 0 10px 0;
       align-items: flex-start;
     }
-    > div:first-child {
+
+    > .firs-row {
       display: flex;
 
       width: 100%;
       justify-content: space-between;
       align-items: center;
     }
+
     .icon {
       opacity: 0;
       display: none;

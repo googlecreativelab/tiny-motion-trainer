@@ -51,6 +51,12 @@ html {
   .mdc-text-field__input {
     font-family: inherit;
   }
+
+  .input-align-right {
+    .mdc-text-field__input {
+      text-align: right;
+    }
+  }
   .smui-text-field--standard {
     height: 24px;
     width: 54px;

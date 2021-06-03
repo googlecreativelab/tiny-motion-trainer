@@ -15,7 +15,7 @@ limitations under the License.
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <script nonce="347fj326c">
       if (location.href.match(/.*\/view$/)) {
@@ -25,6 +25,22 @@ limitations under the License.
 
     <meta charset="utf8" />
     <meta name="viewport" content="width=device-width" />
+
+    <meta name="twitter:title" content="Tiny Motion Trainer" />
+    <meta
+      property="og:image"
+      content="https://experiments.withgoogle.com/tiny-motion-trainer/view/static/TMT_16x9.gif"
+    />
+    <meta
+      property="og:description"
+      content="Inspired by Teachable Machine (teachablemachine.withgoogle.com), this tool allows you to capture IMU data, label it, train a model and upload it to your Arduino board. This project is a part of a collection of experiments that shows the possibilities of building with TensorFlow Lite for Microcontrollers."
+    />
+
+    <meta
+      name="description"
+      content="Inspired by Teachable Machine (teachablemachine.withgoogle.com), this tool allows you to capture IMU data, label it, train a model and upload it to your Arduino board. This project is a part of a collection of experiments that shows the possibilities of building with TensorFlow Lite for Microcontrollers."
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -38,9 +54,9 @@ limitations under the License.
       href="https://fonts.googleapis.com/css?family=Roboto+Mono"
     />
 
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" type="image/png" src="static/favicon-32x32.png" />
 
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script

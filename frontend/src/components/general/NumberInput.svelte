@@ -23,6 +23,7 @@ limitations under the License.
   export let onChange = () => {};
   export let min;
   export let max;
+  export let label;
   export let classStr = "";
   $: if (min !== undefined && value < min) {
     value = min;
@@ -31,11 +32,25 @@ limitations under the License.
   $: if (max !== undefined && value > max) {
     value = max;
   }
+
+  function handleChange() {
+    if (!isFinite(value)) {
+      value = min || 0;
+    }
+    onChange(value);
+  }
 </script>
 
 <Textfield
   type="number"
   bind:value
-  on:change={onChange(value)}
-  input$class={classStr}
-/>
+  invalid={false}
+  on:change={handleChange}
+  input$class={classStr}><span class="hidden-label">{label}</span></Textfield
+>
+
+<style>
+  .hidden-label {
+    display: none;
+  }
+</style>

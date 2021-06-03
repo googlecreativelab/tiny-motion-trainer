@@ -18,7 +18,6 @@ limitations under the License.
 */
 -->
 <script>
-  import { Link } from "svelte-routing";
   import Logo from "@/components/general/Logo";
   import { onMount } from "svelte";
   import { connect, disconnect } from "@/stores/bleInterfaceStore/actions";
@@ -101,51 +100,50 @@ limitations under the License.
         <button class="menu-item-save" on:click={() => showDropDown("save")}
           >Save</button
         >
+        {#if dropDownVisible === "save"}
+          <DropDown
+            options={[
+              { label: "Save Project", value: "save" },
+              { label: "Save Project As...", value: "save-as" },
+            ]}
+            onSelect={handleSaveSelect}
+            selector=".menu-item-save"
+          />
+        {/if}
       </li>
       <li><button on:click={handleLoad}>Load</button></li>
       <li>
         <button on:click={() => (showClearAllPrompt = true)}>Start Over</button>
+
+        {#if showClearAllPrompt}
+          <ClearAllPrompt onClose={() => (showClearAllPrompt = false)} />
+        {/if}
       </li>
       <li>
         <button
           class="menu-item-device"
           on:click={() => showDropDown("settings")}>Device</button
         >
+
+        {#if dropDownVisible === "settings"}
+          <DropDown
+            options={[
+              {
+                label: $isConnected
+                  ? `Disconnect Bluetooth <span class="dot green"/>`
+                  : `Connect Bluetooth <span class="dot red"/>`,
+                value: $isConnected ? "disconnect" : "connect",
+              },
+              { label: "Download Arduino sketch", value: "download" },
+            ]}
+            onSelect={handleDeviceSelect}
+            selector=".menu-item-device"
+          />
+        {/if}
       </li>
     </ul>
   </div>
 </header>
-
-{#if showClearAllPrompt}
-  <ClearAllPrompt onClose={() => (showClearAllPrompt = false)} />
-{/if}
-
-{#if dropDownVisible === "save"}
-  <DropDown
-    options={[
-      { label: "Save Project", value: "save" },
-      { label: "Save Project As...", value: "save-as" },
-    ]}
-    onSelect={handleSaveSelect}
-    selector=".menu-item-save"
-  />
-{/if}
-
-{#if dropDownVisible === "settings"}
-  <DropDown
-    options={[
-      {
-        label: $isConnected
-          ? `Disconnect Bluetooth <span class="dot green"/>`
-          : `Connect Bluetooth <span class="dot red"/>`,
-        value: $isConnected ? "disconnect" : "connect",
-      },
-      { label: "Download Arduino sketch", value: "download" },
-    ]}
-    onSelect={handleDeviceSelect}
-    selector=".menu-item-device"
-  />
-{/if}
 
 <style lang="scss">
   @import "@scss/vars";
@@ -155,20 +153,22 @@ limitations under the License.
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 17px 26px;
+    padding: 17px;
     border-bottom: $border-width solid black;
     .branding {
       display: flex;
 
       h1 {
-        margin: auto 0;
-        margin-left: 20px;
+        margin: 7px 11px auto 11px;
+        font-size: 33.3px;
       }
     }
-
+    ul {
+      margin-top: 4px;
+    }
     li {
       display: inline-block;
-      margin: 0 15px;
+      margin: 0 17px 0 0;
       button:active,
       button:focus {
         color: #fff;

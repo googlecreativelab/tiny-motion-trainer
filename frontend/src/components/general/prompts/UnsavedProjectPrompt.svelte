@@ -56,14 +56,14 @@ limitations under the License.
       it?
     </p>
     <div class="row">
-      <button class="button primary" on:click={handleStartNew}
+      <button class="button primary" on:click={handleStartNew} tabindex="1"
         >No, start a new project</button
       >
-      <button class="button primary" on:click={handleResume}
+      <button class="button primary" on:click={handleResume} tabindex="2"
         >Yes, load my unsaved data.</button
       >
     </div>
-    <button on:click={handleLoadProject} class="notation-text"
+    <button on:click={handleLoadProject} class="notation-text" tabindex="3"
       >Or, load a saved project</button
     >
   </div>

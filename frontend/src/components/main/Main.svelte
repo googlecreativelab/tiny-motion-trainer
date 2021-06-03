@@ -45,7 +45,7 @@ limitations under the License.
       </footer>
     </aside>
 
-    <main>
+    <main aria-live="polite">
       <slot />
     </main>
   </div>
@@ -77,7 +77,7 @@ limitations under the License.
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 55px;
+    padding-top: 54px;
     background-color: $color-bg-tertiary;
     height: 100%;
     border-right: $border-width solid $color-fg-primary;
@@ -86,7 +86,7 @@ limitations under the License.
 
     footer {
       width: 100%;
-      padding: 0 17px 20px 17px;
+      padding: 0 25px 24px 27px;
       z-index: 1; // hack to show button :before background
       :global(button) {
         width: 100%;

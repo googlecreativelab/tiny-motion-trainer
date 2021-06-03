@@ -26,6 +26,7 @@ limitations under the License.
   export let max = 999999;
   export let step = 1;
   export let name = "";
+  export let label = "";
   export let onChange = () => {};
 
   let _internalValue = min;
@@ -43,5 +44,13 @@ limitations under the License.
   safeSetValue(value);
 </script>
 
-<NumberInput bind:value={_internalValue} {onChange} />
-<Slider {name} bind:value={_internalValue} {min} {max} {step} {onChange} />
+<NumberInput bind:value={_internalValue} {onChange} {min} {max} {label} />
+<Slider
+  {name}
+  bind:value={_internalValue}
+  {min}
+  {max}
+  {step}
+  {onChange}
+  {label}
+/>

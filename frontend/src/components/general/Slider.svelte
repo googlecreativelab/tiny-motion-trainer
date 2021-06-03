@@ -24,6 +24,7 @@ limitations under the License.
   export let max = 100;
   export let step = 1;
   export let name;
+  export let label = "";
   export let onChange = () => {};
 </script>
 
@@ -32,6 +33,7 @@ limitations under the License.
   {min}
   {max}
   {step}
+  input$aria-label={label}
   input$name={name}
   on:MDCSlider:change={() => onChange(value)}
 />
