@@ -80,7 +80,6 @@ limitations under the License.
   <div class="panel">
     <div>
       <h2 class="h2" for="capture-threshold">Capturing threshold</h2>
-      >
       <p>
         The minimum motion to start recording. Once motion above the threshold
         is detected, recording begins. The results are used by the model to
@@ -112,7 +111,6 @@ limitations under the License.
   <div class="panel">
     <div>
       <h2 class="h2" for="number-of-samples">Number of samples</h2>
-      >
       <p>
         The recording happens at about 100 samples per second. Choosing a lower
         number of samples will speed up the process of capturing your motion
@@ -139,7 +137,6 @@ limitations under the License.
       <h2 class="h2" for="delay-between-captures">
         Delay between captures (seconds)
       </h2>
-      >
       <p>
         In seconds, provide how long to wait after one recording was made before
         allowing another. This is to prevent double triggering.
