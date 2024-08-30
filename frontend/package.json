@@ -34,7 +34,7 @@
     "seedrandom": "^3.0.5",
     "smui-theme": "^4.2.0",
     "style-loader": "^2.0.0",
-    "svelte": "^3.33.0",
+    "svelte": "^4.2.19",
     "svelte-loader": "^3.0.0",
     "svelte-preprocess": "^4.6.9",
     "svelte-preprocess-sass": "^1.0.0",
